@@ -1,0 +1,249 @@
+/* --- RESET OBLIGATORIO --- */
+* {
+    box-sizing: border-box; /* Evita que el padding rompa el tamaño */
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-dark: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --accent: #3b82f6; /* Azul Tech */
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --hover-bg: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* --- Fondos Decorativos (Glows) --- */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.4;
+}
+.shape-1 { width: 400px; height: 400px; background: #3b82f6; top: -100px; left: -100px; }
+.shape-2 { width: 300px; height: 300px; background: #7c3aed; bottom: -50px; right: -50px; }
+
+/* --- Dashboard Grid Layout --- */
+.dashboard {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Columna Izq Fija, Der Flexible */
+    gap: 24px;
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* --- Estilo Base de las Tarjetas --- */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px); /* Efecto Cristal */
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 32px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Columna Izquierda: Perfil --- */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Ocupa toda la altura */
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+.status {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; box-shadow: 0 0 5px #34d399; }
+
+h1 { font-size: 1.5rem; margin: 10px 0 5px; font-weight: 700; letter-spacing: -0.5px; }
+h2 { font-size: 0.9rem; color: var(--accent); margin: 0 0 20px; font-weight: 500; }
+.bio { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 30px; }
+
+.meta-info { width: 100%; border-top: 1px solid var(--card-border); padding-top: 20px; margin-bottom: 20px; text-align: left; }
+.meta-item { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+
+.social-row { display: flex; gap: 15px; justify-content: center; width: 100%; }
+.social-btn {
+    width: 40px; height: 40px; border-radius: 12px; background: var(--hover-bg);
+    display: flex; align-items: center; justify-content: center; color: white;
+    text-decoration: none; transition: 0.2s;
+}
+.social-btn:hover { background: var(--accent); transform: translateY(-3px); }
+
+/* --- Columna Derecha: Navegación --- */
+.navigation-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-card:hover {
+    background: var(--hover-bg);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateX(5px); /* Movimiento sutil profesional */
+}
+
+.nav-icon {
+    width: 50px; height: 50px; background: rgba(59, 130, 246, 0.1); color: var(--accent);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+}
+
+.nav-text h3 { margin: 0; font-size: 1.1rem; color: white; }
+.nav-text p { margin: 5px 0 0; font-size: 0.85rem; color: var(--text-secondary); }
+
+.arrow { margin-left: auto; color: var(--text-secondary); transition: 0.2s; }
+.nav-card:hover .arrow { transform: translateX(5px); color: white; }
+
+/* Tech Stack */
+.stack-card h3 { font-size: 1rem; margin-top: 0; margin-bottom: 20px; font-weight: 600; color: #fff; }
+.tech-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.tech-badge {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--card-border);
+    padding: 8px 14px; border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary);
+    display: flex; align-items: center; gap: 8px;
+}
+
+
+/* --- Cabecera de Perfil --- */
+
+/* Contenedor flexible vertical */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ESTO centra todo horizontalmente */
+    text-align: center;
+}
+
+.profile-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Espacio entre foto y etiqueta */
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Etiqueta "Disponible" --- */
+.status-pill {
+    background: rgba(16, 185, 129, 0.1); /* Fondo verde muy transparente */
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #34d399; /* Texto verde brillante */
+    font-size: 0.75rem; /* Letra pequeña y elegante */
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+}
+
+/* Animación del punto verde (Llamativo pero sutil) */
+.pulsing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #34d399;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+    }
+}
+
+/* --- RESPONSIVE: FULL WIDTH (ANCHO COMPLETO) --- */
+@media (max-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrado horizontal estricto */
+        
+        /* Reducimos el padding al mínimo para ganar espacio */
+        padding: 10px 10px; 
+        min-height: 100vh;
+    }
+
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+        /* AQUÍ ESTÁ EL CAMBIO CLAVE */
+        width: 425px;       /* Ocupa todo el espacio disponible */
+        max-width: 1000px;   /* Eliminamos el límite de 400px */
+        margin: 0;         /* Sin márgenes extra */
+    	margin-left:25px
+    }
+
+    /* Ajuste para que las tarjetas no toquen los bordes exactos */
+    .card, .profile-card {
+        width: 100%;
+        box-sizing: border-box; /* Vital para que no se salga de la pantalla */
+    }
+}
