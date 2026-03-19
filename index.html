@@ -3,83 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentín De Gennaro | Perfil Profesional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Valentín A. De Gennaro | Tech Portfolio</title>
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Hojas de Estilo -->
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
+    <!-- Cuadrícula de fondo asombrosa (Tech Grid) -->
+    <div class="tech-grid-bg"></div>
+    <div class="ambient-glow glow-cyan"></div>
+    <div class="ambient-glow glow-violet"></div>
 
-    <main class="dashboard">
-        
-		<section class="card profile-card">
-			
-			<div class="profile-header-container">
-				<div class="avatar-wrapper">
-				    <img src="img/YO.png" alt="Valentín" class="avatar">
-				</div>
-				
-				<div class="status-pill">
-				    <span class="pulsing-dot"></span> Disponible para trabajar
-				</div>
-			</div>
-            <h1>Valentín A. De Gennaro</h1>
-            <h2>Estudiante de Desarrollo de Aplicaciónes Multiplataforma (DAM)</h2>
-            <p class="bio">
-                Especializado en Backend, Linux y automatización. Transformo problemas complejos en código limpio.
-            </p>
-            
-            <div class="meta-info">
-                <div class="meta-item"><i class="fa-solid fa-location-dot"></i> Valencia, ES</div>
-                <div class="meta-item"><i class="fa-solid fa-envelope"></i> info@valentindg.com</div>
+    <!-- Navegación Sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">&gt; VDG_</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">01. // Sobre Mí</a>
+                <a href="#projects" class="nav-link">02. // Proyectos</a>
+                <a href="#skills" class="nav-link">03. // Skills</a>
+                <a href="#links" class="nav-link">04. // Hub</a>
             </div>
+            <a href="https://cv.valentindg.com" class="nav-btn-primary" target="_blank">
+                <i class="fa-solid fa-download"></i> Currículum
+            </a>
+        </div>
+    </nav>
 
-            <div class="social-row">
-                <a href="https://github.com/valentindg2506" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <main class="main-content">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <div class="code-comment">/* Hello World, I am */</div>
+                <h1 class="glitch" data-text="Valentín De Gennaro">Valentín De Gennaro</h1>
+                
+                <div class="typing-container">
+                    <span class="keyword">const</span> <span class="variable">developer</span> = {<br>
+                    &nbsp;&nbsp;role: <span class="string">"Full Stack / DAM"</span>,<br>
+                    &nbsp;&nbsp;status: <span class="string pulse-text">"Available for work"</span>,<br>
+                    &nbsp;&nbsp;location: <span class="string">"Valencia, ES"</span><br>
+                    };
+                </div>
+                
+                <p class="hero-bio">
+                    Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM). 
+                    Construyo sistemas robustos, optimizo procesos en el backend y diseño interfaces visualmente impactantes.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Ver mis proyectos <i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="https://github.com/valentindg2506" target="_blank" class="btn btn-secondary">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hexagon-container">
+                    <img src="img/YO.png" alt="Valentín" class="hero-avatar" id="hero-img">
+                    <div class="hex-border"></div>
+                </div>
             </div>
         </section>
 
-        <section class="navigation-grid">
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+            <div class="section-header">
+                <h2><span class="num">01.</span> Sobre Mí</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="btn-close"></span>
+                        <span class="btn-min"></span>
+                        <span class="btn-max"></span>
+                        <span class="terminal-title">bash - valentin@dam-server ~ </span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">valentin@dam-server:~$</span> cat about_me.txt</p>
+                        <p class="output">
+                            Soy una persona dinámica, organizada y expeditiva. Mi pasión por la tecnología me llevó a estudiar DAM para dominar tanto la lógica del servidor (Backend) como la presentación del cliente (Frontend).
+                            <br><br>
+                            Tengo experiencia práctica construyendo CRMs complejos, sistemas de gestión multi-tenant, APIs RESTful y bases de datos relacionales bien estructuradas. Me encanta resolver problemas mediante código limpio y eficiente.
+                            <br><br>
+                            Cuando no estoy programando, me encontrarás explorando nuevas arquitecturas de software, configurando servidores Linux o trabajando en equipo para llevar proyectos al siguiente nivel.
+                        </p>
+                        <p><span class="prompt">valentin@dam-server:~$</span> <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Backend</h3>
+                        <p>Diseño de APIs, bases de datos y lógica de servidor.</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h3>Frontend</h3>
+                        <p>Interfaces dinámicas, responsivas y de alto impacto.</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-brands fa-linux"></i>
+                        <h3>Sistemas</h3>
+                        <p>Gestión de servidores, redes y entornos Linux.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects-section" id="projects">
+            <div class="section-header">
+                <h2><span class="num">02.</span> Proyectos Destacados</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Tinoprop -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-icon"><i class="fa-solid fa-building-user"></i></div>
+                        <h3 class="project-title">Tinoprop CRM</h3>
+                        <p class="project-desc">
+                            CRM inmobiliario Multi-Tenant en producción (V1.0). Cuenta con 19 módulos, jerarquía de roles de 7 niveles, tableros Kanban interactivos y un sistema de matching avanzado.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>JavaScript</li>
+                            <li>Multi-Tenant</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://portafolio.valentindg.com/proyectos/tinoprop.html" target="_blank" title="Ver detalles"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/Valentindg2506/Tinoprop" target="_blank" title="Código fuente"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RoomManager -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-icon"><i class="fa-solid fa-bed"></i></div>
+                        <h3 class="project-title">RoomManager</h3>
+                        <p class="project-desc">
+                            Plataforma integral para la gestión de alquileres por habitaciones. Automatización de contratos en PDF, validación de pagos, publicación en portales y KPIs financieros.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>PHP OOP</li>
+                            <li>REST API</li>
+                            <li>Bootstrap 5</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://portafolio.valentindg.com/proyectos/roommanager.html" target="_blank" title="Ver detalles"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/Valentindg2506/RoomManager" target="_blank" title="Código fuente"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAS Real State -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+                        <h3 class="project-title">CAS Real State</h3>
+                        <p class="project-desc">
+                            Web corporativa profesional para una agencia inmobiliaria española. Diseño moderno, agenda de citas integrada y altamente responsiva para captación de leads.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JS Vanilla</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://casrs.es" target="_blank" title="Sitio Web en Vivo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AdminViews -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-icon"><i class="fa-solid fa-tv"></i></div>
+                        <h3 class="project-title">AdminViews</h3>
+                        <p class="project-desc">
+                            Aplicación web de tracking para series y películas. Permite al usuario crear listas personalizadas, puntuar, ver estadísticas y actualizar estados en tiempo real vía AJAX.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>AJAX</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://adminviews.valentindg.com" target="_blank" title="Visitar"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             
-            <a href="https://portafolio.valentindg.com" class="card nav-card primary">
-                <div class="nav-icon"><i class="fa-solid fa-layer-group"></i></div>
-                <div class="nav-text">
-                    <h3>Portafolio</h3>
-                    <p>Ver mis proyectos y código</p>
+            <div class="btn-center">
+                <a href="https://portafolio.valentindg.com" class="btn btn-outline" target="_blank">Ver Todos Mis Proyectos en portafolio.valentindg.com</a>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="skills-section" id="skills">
+            <div class="section-header">
+                <h2><span class="num">03.</span> Tech Stack</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="skills-container wrapper-glass">
+                <div class="skill-category">
+                    <div class="category-title"><i class="fa-solid fa-server"></i> Backend & DB</div>
+                    <div class="tags-group">
+                        <span class="tech-tag"><i class="fa-brands fa-php"></i> PHP (OOP)</span>
+                        <span class="tech-tag"><i class="fa-solid fa-database"></i> MySQL / MariaDB</span>
+                        <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="fa-brands fa-java"></i> Java</span>
+                        <span class="tech-tag"><i class="fa-solid fa-plug"></i> REST APIs</span>
+                    </div>
                 </div>
-                <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            </a>
 
-            <a href="https://cv.valentindg.com" class="card nav-card secondary">
-                <div class="nav-icon"><i class="fa-regular fa-file-lines"></i></div>
-                <div class="nav-text">
-                    <h3>Currículum Vitae</h3>
-                    <p>Formación y experiencia</p>
+                <div class="skill-category">
+                    <div class="category-title"><i class="fa-solid fa-desktop"></i> Frontend UI/UX</div>
+                    <div class="tags-group">
+                        <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</span>
+                        <span class="tech-tag"><i class="fa-solid fa-chart-pie"></i> Chart.js</span>
+                    </div>
                 </div>
-                <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            </a>
 
-			<div class="card stack-card">
-				<h3>Tecnologías Principales</h3>
-				<div class="tech-grid">
-					<span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML</span>
-					<span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
-					<span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
-					<span class="tech-badge"><i class="fa-brands fa-php"></i> PHP</span>
-					<span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
-					<span class="tech-badge"><i class="fa-solid fa-database"></i> SQL</span>
-					<span class="tech-badge"><i class="fa-solid fa-bezier-curve"></i> SVG</span>
-					<span class="tech-badge"><i class="fa-brands fa-markdown"></i> Markdown</span>
-				</div>
-			</div>
+                <div class="skill-category">
+                    <div class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas & OS</div>
+                    <div class="tags-group">
+                        <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+                        <span class="tech-tag"><i class="fa-brands fa-linux"></i> Linux</span>
+                        <span class="tech-tag"><i class="fa-solid fa-server"></i> Apache</span>
+                        <span class="tech-tag"><i class="fa-solid fa-code"></i> VS Code</span>
+                        <span class="tech-tag"><i class="fa-solid fa-table"></i> phpMyAdmin</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- LINKS HUB SECTION -->
+        <section class="links-section" id="links">
+            <div class="section-header">
+                <h2><span class="num">04.</span> Enlaces Principales</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="hub-grid">
+                <a href="https://portafolio.valentindg.com" target="_blank" class="hub-card">
+                    <div class="hub-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="hub-text">
+                        <h3>Portafolio Web Principal</h3>
+                        <p>portafolio.valentindg.com</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right hub-arrow"></i>
+                </a>
+
+                <a href="https://cv.valentindg.com" target="_blank" class="hub-card accent">
+                    <div class="hub-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                    <div class="hub-text">
+                        <h3>Currículum Vitae (Web/PDF)</h3>
+                        <p>cv.valentindg.com</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right hub-arrow"></i>
+                </a>
+            </div>
         </section>
 
     </main>
 
+    <!-- FOOTER / CONTACT -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2 class="footer-title">¿Hablamos sobre tecnología y código?</h2>
+            <p class="footer-text">Siempre estoy dispuesto a colaborar en proyectos interesantes, hablar sobre desarrollo backend o nuevas oportunidades profesionales.</p>
+            
+            <div class="contact-box">
+                <a href="mailto:info@valentindg.com" class="email-link">
+                    <i class="fa-solid fa-envelope"></i> info@valentindg.com
+                </a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/valentindg2506" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/valentin-antonio-de-gennaro/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://valentindg.com" target="_blank"><i class="fa-solid fa-globe"></i></a>
+            </div>
+            
+            <p class="copyright">
+                Diseñado y desarrollado por Valentín De Gennaro. Estudiante de DAM.<br>
+                <span>&copy; <script>document.write(new Date().getFullYear())</script> - Todos los derechos reservados.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Fallback for missing avatar
+        document.getElementById('hero-img').onerror = function() {
+            this.src = 'https://via.placeholder.com/200/0f172a/00f0ff?text=VDG';
+        }
+    </script>
 </body>
 </html>
